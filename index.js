@@ -1,6 +1,4 @@
-const express = require('express');
-
-const app = express();
+const customExpress = require('.config/costumeExpress');
 
 const _PORT = 3000;
 app.listen(_PORT, () => {
