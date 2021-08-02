@@ -5,5 +5,10 @@ module.exports = app => {
 		return res.send("Hello");
 	});
 
+	app.post("/atendimento", (req, res) => {
+		console.log(req.body);
+		res.send("Realizando um post");
+	})
+
 }
 
