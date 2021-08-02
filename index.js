@@ -1,15 +1,13 @@
 const customExpress = require('./config/costumeExpress');
 const conexao = require('./infraestrtura/conexao');
 
-try {
-	
-	conexao.connect(() => {
-		console.log("Foi realizado a conexão com sucesso");
-	});
-
-} catch(err) {
-	console.log("Houve um erro ao conectar ao banco de dados");
-}
+conexao.connect(err => {
+	if(err) {
+		console.log(err);
+	} else {
+		console.log("Conexao com o banco de dados realizado com sucesso !");
+	}
+});
 
 const app = customExpress();
 const _PORT = 3000;
