@@ -1,17 +1,15 @@
 const customExpress = require('./config/costumeExpress');
-const conexao = require('./infraestrtura/conexao');
+const conexao = require('./infraestrutura/conexao');
 
 conexao.connect(err => {
 	if(err) {
-		console.log(err);
+		console.log("Houve um erro ao se conectar com o banco de dados");
 	} else {
-		console.log("Conexao com o banco de dados realizado com sucesso !");
+		console.log("Banco de dados conectado com sucesso");
+		const app =  customExpress();
+		const POSRT = 3000;
+		app.listen(PORT, () => {
+			console.log(`Servidor rodando na porta ${PORT}` );
+		})
 	}
-});
-
-const app = customExpress();
-const _PORT = 3000;
-
-app.listen(_PORT, () => {
-	console.log(`App running on port ${_PORT}`);
-});
+})
