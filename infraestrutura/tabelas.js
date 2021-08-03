@@ -2,7 +2,7 @@ class Tabelas {
 	init(conexao) {
 		this.conexao = conexao;
 
-		this.criarTbAtendimentos();
+		//this.criarTbAtendimentos();
 	}
 	
 		criarTbAtendimentos() {
