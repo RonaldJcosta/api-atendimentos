@@ -1,7 +1,11 @@
 const customExpress = require('./config/costumeExpress');
+
 const conexao = require('./infraestrutura/conexao');
+
 const Tabelas = require('./infraestrutura/tabelas');
+
 conexao.connect(err => {
+
 	if(err) {
 		console.log("Houve um erro ao se conectar com o banco de dados");
 	} else {
