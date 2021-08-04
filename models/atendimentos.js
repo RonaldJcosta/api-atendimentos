@@ -2,7 +2,7 @@ const conexao = require('../infraestrutura/conexao');
 
 class Atendimento {
 	adicionar(atendimento) {
-			const sql = 'INSERT INTO atendimento SET ?'
+			const sql = 'INSERT INTO tb_atendimento SET ?'
 			
 		conexao.query(sql, atendimento, (err, resultado) => {
 			if(err) {
